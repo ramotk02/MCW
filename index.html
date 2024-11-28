@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basma Essaid</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>BE</h1>
+        <nav>
+            <div id="hamburger" class="hamburger-icon">&#9776;</div> 
+            <ul id="nav-list">
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="education.html">Éducation</a></li>
+                <li><a href="experiences.html">Expériences</a></li>
+                <li><a href="projects.html">Projets</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+    <main>
+        <section class="intro">
+            <div class="divA">
+                <img src="./Img/BE.png" alt="BE">
+            </div>
+            <div class="divB">
+                <h1>Portfolio</h1>
+                <h1>Basma Essaid</h1>
+            </div>
+        </section>
+
+        <section class="about" id="about-me">
+            <div class="divB">
+                <h2>À propos de moi</h2>
+                <p>Je suis Basma Essaid, étudiante en troisième année et passionnée par le monde des affaires, motivée par l'acquisition de compétences pratiques dans divers domaines du management. Forte d'une solide formation académique et d'une volonté constante d'apprendre, je suis à la recherche d'opportunités enrichissantes qui me permettront de mettre en pratique mes connaissances et de contribuer de manière significative à des projets stimulants.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright 2024 Basma Essaid</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const hamburger = document.getElementById('hamburger');
+            const navList = document.getElementById('nav-list');
+            const image = document.querySelector('.divA img');
+
+
+            image.addEventListener('click', function() {
+        document.getElementById('about-me').scrollIntoView({
+            behavior: 'smooth' 
+        });
+    });
+            hamburger.addEventListener('click', function() {
+                navList.classList.toggle('nav-active'); 
+            });
+        });
+    </script>
+</body>
+</html>

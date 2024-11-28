@@ -1,0 +1,281 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
+  background: linear-gradient(to right, #f5f7fa, #ffffff);
+}
+
+
+h2 {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+p {
+  margin: 15px 0;
+  font-size: 1.1em;
+  color: #555;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background: #ffffff;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+  color: #ff66a3;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+  padding: 12px 20px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  background: #ff66a3;
+  color: white;
+  transform: scale(1.05);
+}
+
+.intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 40px;
+  background: linear-gradient(to right, #ffccf2, #ffffff);
+}
+
+.divA {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.divA img {
+    width: 120%;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 50px;
+}
+.divA img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.divB {
+  width: 100%;
+  text-align: center;
+}
+
+.divB h1 {
+  font-size: 4em;
+  color: #333;
+  margin: 0;
+
+}
+
+.about {
+  padding: 40px 15%;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.divB h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.divB h1:hover, .divB h2:hover {
+    color: #ff66a3; 
+    transform: scale(1.1); 
+    transition: all 0.3s ease; 
+}
+
+.about {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #ff66a3;
+  color: white;
+  width: 100%;
+  position: relative;
+}
+
+footer p {
+  font-size: 1em;
+  margin: 0;
+  display: inline-block;
+  line-height: 1.5;
+}
+
+footer p:hover {
+  color: #ffccf2;
+  transition: color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  strong {
+    font-size: 90px;
+  }
+
+  .intro {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .divA,
+  .divB {
+    width: 100%;
+    text-align: center;
+  }
+
+  .divA img {
+    width: 90%;
+    height: auto;
+  }
+
+  .about {
+    padding: 20px 5%;
+    height: auto;
+  }
+
+  .divB h1 {
+    font-size: 2em;
+  }
+
+  .divB h2 {
+    font-size: 2em;
+  }
+
+  footer p {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #ffffff;
+    flex-direction: column;
+    padding-top: 50px;
+    box-shadow: -2px 0px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  nav ul li {
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+
+  nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: block;
+  }
+
+  #hamburger {
+    display: block;
+    font-size: 2.5em;
+    color: #333;
+    cursor: pointer;
+    z-index: 1001;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+
+  .nav-active {
+    display: flex;
+  }
+}
+
+@media (min-width: 769px) {
+  #hamburger {
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    padding: 0;
+  }
+
+  nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+}
